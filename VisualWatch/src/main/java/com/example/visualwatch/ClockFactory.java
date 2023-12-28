@@ -1,8 +1,8 @@
 package com.example.visualwatch;
 
 public class ClockFactory {
-    static public Cl new_watch(Type typ, String name, float price)  {
-        switch (typ) {
+    static public Cl new_watch(Type type, String name, float price)  {
+        switch (type) {
             case Clock:
                 return new Clock(name, price);
             case Clock_3:

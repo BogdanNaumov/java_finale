@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class Controller_new {
     @FXML
-    public Button close;
+    public Button Set;
     @FXML
     public TextField hour;
     @FXML
@@ -20,7 +20,7 @@ public class Controller_new {
     public TextField sec;
 
     public void close(ActionEvent actionEvent) {
-        Stage stage = (Stage)close.getScene().getWindow();
+        Stage stage = (Stage)Set.getScene().getWindow();
         stage.close();
     }
 

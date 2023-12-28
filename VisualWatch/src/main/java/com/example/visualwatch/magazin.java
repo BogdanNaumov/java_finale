@@ -187,47 +187,27 @@ public class magazin implements Iterable<Cl>{
     public Iterator<Cl> iterator(){
         return cls.iterator();
     }
-    public void SetTime(Time type, int znash){
-        for (Cl a: cls){
+    public void SetTime(Time type, int znash) {
+        for (Cl a : cls) {
             try {
-                a.Set_time(type,znash);
+                a.Set_time(type, znash);
                 ArrayList<Integer> temp = GetTime(a);
                 PreparedStatement statement = c.prepareStatement(
                         "UPDATE Watchs_tabel SET hour = ?,min = ?, sec = ?  WHERE ID = ?;");
                 statement.setInt(1, temp.get(0));
                 statement.setInt(2, temp.get(1));
-                statement.setInt(3, a.Get_type()== Type.Clock_3? temp.get(2):0);
+                statement.setInt(3, a.Get_type() == Type.Clock_3 ? temp.get(2) : 0);
                 statement.setInt(4, a.getID());
                 statement.executeUpdate();
-            }catch(IncorectData error){
+            } catch (IncorectData error) {
                 System.out.println(error);
-            }catch (InvalidType error){
+            } catch (InvalidType error) {
 
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
         }
 
-        events();
-    }
-
-    public void PopularName(){
-        int maxi = -1; String name = "";
-        Map<String,Integer> arr = new HashMap<>();
-        for(Cl a: cls){
-            Integer it = arr.get(a.Get_name());
-            if (it == null)
-                arr.put(a.Get_name(),1);
-            else
-                arr.put(a.Get_name(),it + 1);
-        }
-        Comparator<Cl> comp = new Comparator<Cl>() {
-            @Override
-            public int compare(Cl o1, Cl o2) {
-                return Integer.compare(arr.get(o2.Get_name()),arr.get(o1.Get_name()));
-            }
-        };
-        cls.sort(comp);
         events();
     }
 
