@@ -16,22 +16,15 @@
    <bottom>
       <Pane prefHeight="102.0" prefWidth="234.0" style="-fx-background-color: white; -fx-border-color: black;" BorderPane.alignment="CENTER">
          <children>
-            <ChoiceBox fx:id="type" layoutX="330.0" layoutY="14.0" prefHeight="31.0" prefWidth="151.0" />
-            <Label layoutX="276.0" layoutY="18.0" text="Тип:" />
+            <ChoiceBox fx:id="type" layoutX="443.0" layoutY="11.0" prefHeight="31.0" prefWidth="143.0" style="-fx-background-color: #7CFC00;" />
             <Label layoutX="14.0" layoutY="18.0" text="Название:" />
             <TextField fx:id="name" layoutX="86.0" layoutY="14.0" promptText="Имя часов" />
             <Label layoutX="9.0" layoutY="58.0" text=" Стоимость:" />
-            <Label layoutX="276.0" layoutY="57.0" text="Время:" />
             <TextField fx:id="price" layoutX="87.0" layoutY="54.0" prefHeight="25.0" prefWidth="147.0" promptText="Цена" />
-            <Label layoutX="330.0" layoutY="43.0" prefHeight="28.0" prefWidth="150.0" text="       :       :">
-               <font>
-                  <Font size="26.0" />
-               </font>
-            </Label>
-            <TextField fx:id="Hour" layoutX="331.0" layoutY="53.0" prefHeight="25.0" prefWidth="45.0" promptText="00" />
-            <TextField fx:id="Minut" layoutX="390.0" layoutY="53.0" prefHeight="25.0" prefWidth="42.0" promptText="00" />
-            <TextField fx:id="Secund" layoutX="445.0" layoutY="53.0" prefHeight="25.0" prefWidth="38.0" promptText="00" />
-            <Button layoutX="493.0" layoutY="18.0" mnemonicParsing="false" onAction="#addWatch" prefHeight="61.0" prefWidth="104.0" text="Добавить" />
+            <TextField fx:id="Hour" layoutX="443.0" layoutY="54.0" prefHeight="25.0" prefWidth="45.0" promptText="00" />
+            <TextField fx:id="Minut" layoutX="498.0" layoutY="54.0" prefHeight="25.0" prefWidth="42.0" promptText="00" />
+            <TextField fx:id="Secund" layoutX="548.0" layoutY="54.0" prefHeight="25.0" prefWidth="38.0" promptText="00" />
+            <Button layoutX="248.0" layoutY="11.0" mnemonicParsing="false" onAction="#addWatch" prefHeight="71.0" prefWidth="183.0" style="-fx-background-color: #7CFC00;" text="Добавить" />
 
          </children></Pane>
    </bottom>
@@ -56,17 +49,17 @@
    <top>
       <Pane prefHeight="22.0" prefWidth="600.0" style="-fx-border-color: Grey;" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" onAction="#newTime" prefHeight="22.0" prefWidth="200.0" text="Изменить время">
+            <Button mnemonicParsing="false" onAction="#newTime" prefHeight="22.0" prefWidth="200.0" style="-fx-background-color: #7CFC00;" text="Изменить время">
                <font>
                   <Font size="10.0" />
                </font>
             </Button>
-            <Button layoutX="199.0" mnemonicParsing="false" onAction="#sortName" prefHeight="21.0" prefWidth="197.0" text="Сортировать по имени">
+            <Button layoutX="199.0" mnemonicParsing="false" onAction="#sortName" prefHeight="21.0" prefWidth="197.0" style="-fx-background-color: #7CFC00;" text="Сортировать по имени">
                <font>
                   <Font size="10.0" />
                </font>
             </Button>
-            <Button layoutX="396.0" mnemonicParsing="false" onAction="#sortPrice" prefHeight="21.0" prefWidth="201.0" text="Сортировать по цене">
+            <Button layoutX="396.0" mnemonicParsing="false" onAction="#sortPrice" prefHeight="21.0" prefWidth="204.0" style="-fx-background-color: #7CFC00;" text="Сортировать по цене">
                <font>
                   <Font size="10.0" />
                </font>

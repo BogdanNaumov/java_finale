@@ -19,16 +19,16 @@ public class NewTimeController {
     @FXML
     public TextField sec;
 
+    public void close(ActionEvent actionEvent) {
+        Stage stage = (Stage)close.getScene().getWindow();
+        stage.close();
+    }
+
     public ArrayList<Integer> getValue(){
         ArrayList<Integer> arr = new ArrayList<>();
         arr.add(Integer.parseInt(hour.getText()));
         arr.add(Integer.parseInt(minut.getText()));
         arr.add(Integer.parseInt(sec.getText()));
         return arr;
-    }
-
-    public void close(ActionEvent actionEvent) {
-        Stage stage = (Stage)close.getScene().getWindow();
-        stage.close();
     }
 }
