@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.visualwatch.MainController">
+   <bottom>
+      <Pane prefHeight="102.0" prefWidth="234.0" style="-fx-background-color: white; -fx-border-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <ChoiceBox fx:id="type" layoutX="330.0" layoutY="14.0" prefHeight="31.0" prefWidth="151.0" />
+            <Label layoutX="276.0" layoutY="18.0" text="Тип:" />
+            <Label layoutX="14.0" layoutY="18.0" text="Название:" />
+            <TextField fx:id="name" layoutX="86.0" layoutY="14.0" promptText="Имя часов" />
+            <Label layoutX="9.0" layoutY="58.0" text=" Стоимость:" />
+            <Label layoutX="276.0" layoutY="57.0" text="Время:" />
+            <TextField fx:id="price" layoutX="87.0" layoutY="54.0" prefHeight="25.0" prefWidth="147.0" promptText="Цена" />
+            <Label layoutX="330.0" layoutY="43.0" prefHeight="28.0" prefWidth="150.0" text="       :       :">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <TextField fx:id="Hour" layoutX="331.0" layoutY="53.0" prefHeight="25.0" prefWidth="45.0" promptText="00" />
+            <TextField fx:id="Minut" layoutX="390.0" layoutY="53.0" prefHeight="25.0" prefWidth="42.0" promptText="00" />
+            <TextField fx:id="Secund" layoutX="445.0" layoutY="53.0" prefHeight="25.0" prefWidth="38.0" promptText="00" />
+            <Button layoutX="493.0" layoutY="18.0" mnemonicParsing="false" onAction="#addWatch" prefHeight="61.0" prefWidth="104.0" text="Добавить" />
+
+         </children></Pane>
+   </bottom>
+   <center>
+      <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <content>
+            <BorderPane>
+               <center>
+                  <GridPane fx:id="allWatch" BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="65.0" prefHeight="65.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+               </center>
+            </BorderPane>
+        </content>
+      </ScrollPane>
+   </center>
+   <top>
+      <Pane prefHeight="22.0" prefWidth="600.0" style="-fx-border-color: Grey;" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#newTime" prefHeight="22.0" prefWidth="200.0" text="Изменить время">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button layoutX="199.0" mnemonicParsing="false" onAction="#sortName" prefHeight="21.0" prefWidth="197.0" text="Сортировать по имени">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button layoutX="396.0" mnemonicParsing="false" onAction="#sortPrice" prefHeight="21.0" prefWidth="201.0" text="Сортировать по цене">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </top>
+</BorderPane>
