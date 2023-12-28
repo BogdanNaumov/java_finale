@@ -28,7 +28,7 @@ public class Clock implements Cl {
 
     @Override
     public String toString(){
-        return "" + hour + ":" + minut;
+        return "" + hour + " " + minut;
     }
 
 

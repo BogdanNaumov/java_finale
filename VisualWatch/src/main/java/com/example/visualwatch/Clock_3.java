@@ -11,7 +11,7 @@ public class Clock_3 extends Clock {
 
     @Override
     public String toString(){
-        return "" + hour + ":" + minut + ":" + sec;
+        return "" + hour + " " + minut + " " + sec;
     }
 
 

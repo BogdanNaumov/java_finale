@@ -7,10 +7,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class MainForm extends Application {
+public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(MainForm.class.getResource("main_view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("main_view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 600);
         stage.setTitle("Clock_magazin");
         stage.setScene(scene);

@@ -6,9 +6,9 @@ import javafx.scene.control.Label;
 
 public class WatchController {
     Cl cl;
-    ShopWatch shop;
+    magazin shop;
 
-    public WatchController(ShopWatch shop){
+    public WatchController(magazin shop){
         this.shop = shop;
     }
     public void setWatsh(Cl cl){

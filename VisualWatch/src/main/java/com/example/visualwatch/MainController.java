@@ -20,10 +20,10 @@ public class MainController implements Initializable,IOserver {
 
 
     public GridPane allWatch;
-    ShopWatch shop;
+    magazin shop;
     public MainController(){
         allWatch = new GridPane();
-        shop = new ShopWatch("ShopWach","I");
+        shop = new magazin("ShopWach","I");
         shop.cum(this);
     }
 
@@ -66,7 +66,7 @@ public class MainController implements Initializable,IOserver {
     }
 
     public void addWatch(ActionEvent actionEvent) {
-        Cl cl = FabricWatch.new_watch(type.getValue(),name.getText(),Float.parseFloat(price.getText()));
+        Cl cl = ClockFactory.new_watch(type.getValue(),name.getText(),Float.parseFloat(price.getText()));
         try{
             cl.Set_time(Time.Hour, Integer.parseInt(Hour.getText()));
             cl.Set_time(Time.Minut, Integer.parseInt(Minut.getText()));
@@ -78,7 +78,7 @@ public class MainController implements Initializable,IOserver {
     }
 
     @Override
-    public void event(ShopWatch s) {
+    public void event(magazin s) {
         allWatch.getChildren().clear();
 
         for (Cl p: shop) {
@@ -119,7 +119,7 @@ public class MainController implements Initializable,IOserver {
             stage.setScene(new Scene(rootl, 226,100));
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.showAndWait();
-            NewTimeController controller = fxmlLoader.getController();
+            Controller_new controller = fxmlLoader.getController();
             arr = controller.getValue();
             shop.SetTime(Time.Hour,arr.get(0));
             shop.SetTime(Time.Minut,arr.get(1));
